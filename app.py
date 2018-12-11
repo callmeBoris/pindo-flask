@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 import requests
 from requests.auth import HTTPBasicAuth
+import json
 
 app = Flask(__name__)
 
@@ -39,7 +40,7 @@ def ping():
         'payload': 'ping'
     }
     )
-
+#New
 from . import Send
 @app.route('/send', methods=['POST'])
 def sms():
@@ -49,3 +50,5 @@ def sms():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+
+#This is a comment
